@@ -1,0 +1,10 @@
+# Use native profile to allow properties set locally
+# Set secondary profile for current environment, defaulting to local if no environment is provided
+
+spring:
+  profiles:
+    active: native, ${RMS_APP_PROFILE:local}
+  cloud.config.label: config
+
+server:
+  port: 8888
