@@ -1,0 +1,22 @@
+
+spring:
+  profiles: clouddev
+  
+  eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_LOCATION:http://127.0.0.1:8761}/eureka/
+  
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+    jpa:
+      hibernate:
+        ddl-auto: update
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      properties:
+        hibernate:
+          show_sql: false
+          use_sql_comments: false
+          temp:
+            use_jdbc_metadata_default: false 
