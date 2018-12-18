@@ -1,3 +1,8 @@
 server:
   port: 4000
 
+spring: 
+    datasource:
+      url: ${RMS_RESOURCES_DB_URL}
+      user: ${RMS_RESOURCES_DB_ROLE}
+      password: ${RMS_RESOURCES_DB_PASSWORD}
