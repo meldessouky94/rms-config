@@ -6,7 +6,7 @@ node{
    
    stage('SCM Checkout'){
      git 'https://github.com/1809-Spark-usf/rms-config'
-     git 'git checkout cloud-dev' 
+     sh 'git checkout cloud-dev' 
    }
    
    stage('Compile-Package'){
