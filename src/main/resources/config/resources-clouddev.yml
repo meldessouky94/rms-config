@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     url: ${RMS_RESOURCES_DB_URL}
-    user: ${RMS_RESOURCES_DB_ROLE}
+    username: ${RMS_RESOURCES_DB_ROLE}
     password: ${RMS_RESOURCES_DB_PASSWORD}
     
   hikari:
