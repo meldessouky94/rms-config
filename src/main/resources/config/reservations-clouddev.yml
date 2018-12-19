@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     url: ${RMS_RESERVATIONS_DB_URL}
-    user: ${RMS_RESERVATIONS_DB_ROLE}
+    username: ${RMS_RESERVATIONS_DB_ROLE}
     password: ${RMS_RESERVATIONS_DB_PASSWORD}
     
   hikari:
