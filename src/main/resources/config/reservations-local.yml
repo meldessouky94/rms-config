@@ -4,3 +4,7 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://rms-clouddev.ccadpnws7azu.us-west-1.rds.amazonaws.com:5432/reservations
+
+  cloud:
+    discovery:
+      enabled: true
