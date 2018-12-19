@@ -1,12 +1,6 @@
 
 spring:
   profiles: clouddev
-  
-  eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${DISCOVERY_LOCATION:http://127.0.0.1:8761}/eureka/
-  
   datasource:
     hikari:
       maximum-pool-size: 10
@@ -19,4 +13,9 @@ spring:
           show_sql: false
           use_sql_comments: false
           temp:
-            use_jdbc_metadata_default: false 
+            use_jdbc_metadata_default: false
+  eureka:
+    client:
+      register-with-eureka: false
+      fetch-registry: false
+       
