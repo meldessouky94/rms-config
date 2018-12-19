@@ -18,4 +18,10 @@ spring:
     client:
       register-with-eureka: false
       fetch-registry: false
-       
+  cloud:
+    discovery:
+      enabled: false
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
