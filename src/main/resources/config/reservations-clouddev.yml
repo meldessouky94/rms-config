@@ -20,4 +20,7 @@ spring:
         use_sql_comments: false
         temp:
           use_jdbc_metadata_default: false
-    
+  eureka:
+    client:
+      register-with-eureka: false
+      fetch-registry: false

@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: ${RMS_RESOURCES_DB_URL}
-    username: ${RMS_RESOURCES_DB_ROLE}
-    password: ${RMS_RESOURCES_DB_PASSWORD}
+    url: jdbc:postgresql://rms-clouddev-final.ccadpnws7azu.us-west-1.rds.amazonaws.com:5432/resources
+    username: rms_resources_app_server
+    password: Uia4KdJYTz0kDTD2qSdiuo66l0lyGceIpLD5b7WF
     
   hikari:
     # Database connection pool size
@@ -20,4 +20,8 @@ spring:
         use_sql_comments: false
         temp:
           use_jdbc_metadata_default: false
+  eureka:
+    client:
+      register-with-eureka: false
+      fetch-registry: false
 
