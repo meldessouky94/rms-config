@@ -1,16 +1,9 @@
 # Common Configuration
 
-
 # Configuration for local development environment
 spring:
-  profiles: local
+  profile: local
  
-  datasource:
-    username: hibernate_role
-    password: top-secret
-    hikari:
-      # Database connection pool size
-      maximum-pool-size: 10
   jpa:
     hibernate:
       ddl-auto: update
@@ -26,4 +19,5 @@ spring:
 # Configuration for cloud development environment
 spring:
   profiles: development
+  
   

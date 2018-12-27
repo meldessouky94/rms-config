@@ -2,7 +2,27 @@ server:
   port: 4000
 
 spring:
+  cloud.discovery.enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/resources
-    
-  
+    url: ${RMS_RESOURCES_DB_URL}
+    username: ${RMS_RESOURCES_DB_ROLE}
+    password: ${RMS_RESOURCES_DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        temp:
+          use_jdbc_metadata_default: false
+eureka:
+  client:
+    enabled: true
+    registerWithEureka: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registration:
+      enabled: true
