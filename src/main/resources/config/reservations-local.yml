@@ -3,8 +3,28 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://rms-clouddev.ccadpnws7azu.us-west-1.rds.amazonaws.com:5432/reservations
-
+    url: ${RMS_RESERVATIONS_DB_URL}
+    username: ${RMS_RESERVATIONS_DB_ROLE}
+    password: ${RMS_RESERVATIONS_DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        temp:
+          use_jdbc_metadata_default: false
   cloud:
     discovery:
+      enabled: true
+eureka:
+  client:
+    enabled: true
+    registerWithEureka: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registration:
       enabled: true
