@@ -1,25 +1,13 @@
 # Common Configuration
 
-
 # Configuration for local development environment
 spring:
-  profiles: local
-  
-  h2:
-    console:
-      enabled: true
+  profile: local
  
-  datasource:
-    username: sa
-    password: 
-    driver-class-name: org.h2.Driver
-    hikari:
-      # Database connection pool size
-      maximum-pool-size: 10
   jpa:
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
         show_sql: false
@@ -31,4 +19,5 @@ spring:
 # Configuration for cloud development environment
 spring:
   profiles: development
+  
   

@@ -3,8 +3,31 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
-
-#  cloud:
-#    discovery:
-#      enabled: true
+    url: ${RMS_RESERVATIONS_DB_URL}
+    username: ${RMS_RESERVATIONS_DB_ROLE}
+    password: ${RMS_RESERVATIONS_DB_PASSWORD}
+  hikari:
+    # Database connection pool size
+    maximum-pool-size: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        temp:
+          use_jdbc_metadata_default: false
+  cloud:
+    discovery:
+      enabled: true
+eureka:
+  client:
+    enabled: true
+    registerWithEureka: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registration:
+      enabled: true
