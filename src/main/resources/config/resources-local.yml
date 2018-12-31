@@ -7,6 +7,9 @@ spring:
     url: ${RMS_RESOURCES_DB_URL}
     username: ${RMS_RESOURCES_DB_ROLE}
     password: ${RMS_RESOURCES_DB_PASSWORD}
+  hikari:
+    # Database connection pool size
+    maximum-pool-size: 1
   jpa:
     hibernate:
       ddl-auto: update
