@@ -1,5 +1,3 @@
-# Common Configuration
-
 # Configuration for local development environment
 spring:
   profile: local
@@ -14,10 +12,5 @@ spring:
         use_sql_comments: false
         temp:
           use_jdbc_metadata_default: false
----
-
-# Configuration for cloud development environment
-spring:
-  profiles: development
   
   
