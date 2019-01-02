@@ -1,0 +1,17 @@
+#Configuration for postgresql RDS database
+spring:
+  profile: postgres
+  
+  datasource:
+      hikari:
+        maximum-pool-size: 10
+      jpa:
+        hibernate:
+          ddl-auto: update
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        properties:
+          hibernate:
+            show_sql: false
+            use_sql_comments: false
+            temp:
+              use_jdbc_metadata_default: false

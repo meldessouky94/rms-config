@@ -1,6 +1,6 @@
-# Configuration for local development environment
+# Configuration for h2 database
 spring:
-  profiles: h2
+  profile: h2
  
   h2:
     console:

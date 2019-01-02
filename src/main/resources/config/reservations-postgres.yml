@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: ${RMS_RESERVATIONS_DB_URL}
+    username: ${RMS_RESERVATIONS_DB_ROLE}
+    password: ${RMS_RESERVATIONS_DB_PASSWORD}
+    
+  hikari:
+    # Database connection pool size
+    maximum-pool-size: 10
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        temp:
+          use_jdbc_metadata_default: false
