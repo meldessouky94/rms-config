@@ -1,0 +1,15 @@
+server:
+  port: 5000
+
+spring:
+  eureka:
+    client:
+      register-with-eureka: false
+      fetch-registry: false
+eureka:
+  client:
+    enabled: false
+    registerWithEureka: false
+    register-with-eureka: false
+    registration:
+      enabled: false
