@@ -2,7 +2,8 @@ server:
   port: 4300
 
 cancelTemplate: FormattedCancellationTemplate
-confirmTemplate: FormattedConfirmationTemplate
+confirmTemplate: RevatureStyleConfirm
+verifyTemplate: ConfirmRegistrationTemplate
 
 
 spring:
