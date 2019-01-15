@@ -16,3 +16,10 @@ eureka:
     register-with-eureka: false
     registration:
       enabled: false
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1500
