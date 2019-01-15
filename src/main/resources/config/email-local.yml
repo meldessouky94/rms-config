@@ -1,6 +1,12 @@
 server:
   port: 4300
 
+cancelTemplate: RevatureCancellation
+confirmTemplate: RevatureReservationConfirmation
+verifyTemplate: RevatureRegistrationConfirm
+reminderTemplate: RevatureReminder
+
+
 spring:
   cloud.discovery.enabled: true
 eureka:
