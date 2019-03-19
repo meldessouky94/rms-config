@@ -1,0 +1,25 @@
+server:
+  port: 4100
+
+spring:
+  eureka:
+    client:
+      register-with-eureka: false
+      fetch-registry: false
+  cloud:
+    discovery:
+      enabled: false
+eureka:
+  client:
+    enabled: false
+    registerWithEureka: false
+    register-with-eureka: false
+    registration:
+      enabled: false
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1500

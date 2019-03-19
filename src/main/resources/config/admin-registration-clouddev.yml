@@ -1,14 +1,15 @@
-#Configuration for clouddev development environment
+server:
+  port: 5100
+
 spring:
-  profile: clouddev
   eureka:
     client:
       register-with-eureka: false
       fetch-registry: false
-  cloud:
-    discovery:
-      enabled: false
 eureka:
   client:
+    enabled: false
+    registerWithEureka: false
     register-with-eureka: false
-    fetch-registry: false
+    registration:
+      enabled: false

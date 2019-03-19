@@ -1,5 +1,10 @@
 server:
-  port: 4000
+  port: 4300
+
+cancelTemplate: FormattedCancellationTemplate
+confirmTemplate: RevatureStyleConfirm
+verifyTemplate: ConfirmRegistrationTemplate
+
 
 spring:
   cloud.discovery.enabled: true
