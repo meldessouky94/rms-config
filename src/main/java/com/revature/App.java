@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 /**
  * The Class App.
  * Spring boot application that enables 
@@ -17,6 +19,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * 
  * @author 1811-Java-Nick | 12/27/2018
  */
+@EnableSwagger2
 @SpringBootApplication
 @EnableConfigServer
 public class App {
